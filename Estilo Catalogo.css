@@ -1,0 +1,9 @@
+.categoria {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.categoria.oculto {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+}

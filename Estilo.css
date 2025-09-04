@@ -1,0 +1,255 @@
+/*Navbar*/
+.navbar {
+  background-color: #87CEFA;
+}
+
+/* Botones de la navbar */
+.navbar .btn-outline-success,
+.navbar .btn-outline-dark {
+  color: #000;
+  border-color: #000;    
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.navbar .btn-outline-success:hover,
+.navbar .btn-outline-dark:hover {
+  background-color: #fff;    
+  color: #000;               
+  border-color: #000;
+}
+
+/*Carrusel Principal*/
+.hero-img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 60vh;      
+  }
+}
+
+#carouselCategorias .card img {
+  width: 100%;
+  height: 250px;
+}
+
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 40vh;            /* Mantiene proporción en móvil */
+    object-fit: cover;     /* También en móvil */
+  }
+}
+
+/* Botones del carrusel categorías */
+#carouselCategorias .carousel-control-prev,
+#carouselCategorias .carousel-control-next {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#carouselCategorias .carousel-control-prev {
+  left: -80px;
+}
+#carouselCategorias .carousel-control-next {
+  right: -80px; 
+}
+/* Íconos de los botones */
+#carouselCategorias .carousel-control-prev i,
+#carouselCategorias .carousel-control-next i {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  #carouselCategorias .carousel-control-prev {
+    left: -30px;
+  }
+  #carouselCategorias .carousel-control-next {
+    right: -30px;
+  }
+  #carouselCategorias .carousel-control-prev i,
+  #carouselCategorias .carousel-control-next i {
+    font-size: 2rem;
+  }
+}
+
+.carousel-caption {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+
+.carousel-caption h1,
+.carousel-caption h2,
+.carousel-caption p {
+  font-family: 'Arial', sans-serif;
+  color: #000;                
+  text-shadow: none;             
+  font-weight: normal;
+}
+
+.carousel-caption h1,
+.carousel-caption h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.carousel-caption p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Botón responsive */
+.carousel-caption .btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+  color: #000; 
+}
+
+/*Nuestros Socios*/
+.brands {
+  background-color: #fff;
+  padding: 3rem 0;
+  border-top: 3px solid #87CEFA;
+  border-bottom: 3px solid #87CEFA;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.brands-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.brands-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.brand-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brand-circle img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/*Productos Destacados y mision, vision y valores*/
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenido de las cartas */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+}
+
+.old-price {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 0.95rem;
+}
+
+
+/* Imágenes más bajas en móviles */
+@media (max-width: 768px) {
+  .card img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+
+/*Footer*/
+.footer {
+  background-color: #87CEFA;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  padding: 2rem 0;
+}
+
+/*Títulos del footer*/
+.footer-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/*Links legales*/
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links li a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+/*Iconos redes sociales*/
+.footer .social-icon {
+  display: inline-block;
+  color: #000;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+/*Separadores*/
+.footer-separator {
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.3);
+  margin: 1.5rem 0;
+}
+
+.vertical-separator {
+  width: 1px;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  margin: auto;
+}
