@@ -14,6 +14,8 @@
   <link rel="icon" type="Icono" href="Imagenes/Icono Pagina.png">
   <!--Css Coleccion (Reutilizo codigo)-->
   <link href="Estilo Catalogo.css" rel="stylesheet"/>
+  <!--Script Filtro por marcas-->
+  <script src="FiltroMarcas.js"></script>
 </head>
 <body>
 
@@ -56,15 +58,25 @@
 </nav>
 
 <!-- Seccion Colecciones -->
-<section class="container py-5 catalogo">
+<section class="container py-5 colecciones">
   <h2 class="section-title">Colecciones</h2>
   <p class="catalogo-intro text-center">
     Explora nuestra selección de ropa, calzado y accesorios pensados para acompañar tu estilo en cada ocasión.
   </p>
 
+  <!-- Filtro por marcas -->
+  <div class="text-center mb-4">
+    <button class="btn btn-outline-primary filtro-marca-btn" data-marca="todos">Todos</button>
+    <button class="btn btn-outline-primary filtro-marca-btn" data-marca="louis-vuitton">Louis Vuitton</button>
+    <button class="btn btn-outline-primary filtro-marca-btn" data-marca="gucci">Gucci</button>
+    <button class="btn btn-outline-primary filtro-marca-btn" data-marca="armani">Armani</button>
+    <button class="btn btn-outline-primary filtro-marca-btn" data-marca="balenciaga">Balenciaga</button>
+    <button class="btn btn-outline-primary filtro-marca-btn" data-marca="prada">Prada</button>
+    <button class="btn btn-outline-primary filtro-marca-btn" data-marca="versace">Versace</button>
+  </div>
+
   <!-- Louis Vuitton -->
-  <h3 class="sub-title">Louis Vuitton</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-marca="louis-vuitton">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Poleron D LV.webp" class="card-img-top" alt="Sweater Clásico">
@@ -79,7 +91,7 @@
       <div class="card">
         <img src="Imagenes/Poleron LV.jpg" class="card-img-top" alt="Polerón Deportivo">
         <div class="card-body text-center">
-          <h5 class="card-title">Poleron Deportivo</h5>
+          <h5 class="card-title">Polerón Deportivo</h5>
           <p class="card-text">$28.000</p>
           <button class="btn btn-sin-stock" disabled>Sin stock</button>
         </div>
@@ -98,8 +110,7 @@
   </div>
 
   <!-- Gucci -->
-  <h3 class="sub-title">Gucci</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-marca="gucci">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Pantalon Gucci.jpg" class="card-img-top" alt="Pantalón Casual">
@@ -133,8 +144,7 @@
   </div>
 
   <!-- Armani -->
-  <h3 class="sub-title">Armani</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-marca="armani">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Vestido Casual.jpg" class="card-img-top" alt="Vestido Casual">
@@ -168,8 +178,7 @@
   </div>
 
   <!-- Balenciaga -->
-  <h3 class="sub-title">Balenciaga</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-marca="balenciaga">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Zapatillas Urbanas VC.jpg" class="card-img-top" alt="Zapatilla Urbana">
@@ -203,8 +212,7 @@
   </div>
 
   <!-- Prada -->
-  <h3 class="sub-title">Prada</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-marca="prada">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Prada Cartera.jpg" class="card-img-top" alt="Cartera Clásica">
@@ -238,8 +246,7 @@
   </div>
 
   <!-- Versace -->
-  <h3 class="sub-title">Versace</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-marca="versace">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Collar Versace.jpg" class="card-img-top" alt="Collar Minimalista">

@@ -35,7 +35,7 @@
 
 @media (max-width: 576px) {
   .hero-img {
-    height: 40vh; /* Ajuste en móvil pequeño */
+    height: 40vh;
   }
 }
 

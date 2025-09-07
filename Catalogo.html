@@ -14,6 +14,8 @@
   <link rel="icon" type="Icono" href="Imagenes/Icono Pagina.png">
   <!--Css Catalogo-->
   <link href="Estilo Catalogo.css" rel="stylesheet"/>
+  <!--Script Filtro Catalogo-->
+  <script src="FiltroCatalogo"></script>
 </head>
 <body>
 
@@ -55,16 +57,25 @@
   </div>
 </nav>
 
-<!-- Sección Catalogo -->
 <section class="container py-5 catalogo">
-  <h2 class="section-title">Catálogo de Productos</h2>
+  <h2 class="section-title text-center">Catálogo de Productos</h2>
   <p class="catalogo-intro text-center">
     Explora nuestra selección de ropa, calzado y accesorios pensados para acompañar tu estilo en cada ocasión.
   </p>
 
+  <!-- Filtro por categorias -->
+  <div class="text-center mb-4">
+    <button class="btn btn-outline-primary filtro-btn" data-categoria="todos">Todos</button>
+    <button class="btn btn-outline-primary filtro-btn" data-categoria="sweater">Sweater y Polerones</button>
+    <button class="btn btn-outline-primary filtro-btn" data-categoria="pantalones">Pantalones</button>
+    <button class="btn btn-outline-primary filtro-btn" data-categoria="vestidos">Vestidos</button>
+    <button class="btn btn-outline-primary filtro-btn" data-categoria="zapatillas">Zapatillas</button>
+    <button class="btn btn-outline-primary filtro-btn" data-categoria="carteras">Carteras</button>
+    <button class="btn btn-outline-primary filtro-btn" data-categoria="accesorios">Accesorios</button>
+  </div>
+
   <!-- Sweater y Polerones -->
-  <h3 class="sub-title">Sweater y Polerones</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-categoria="sweater">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Sweater Clasico.jpg" class="card-img-top" alt="Sweater Clásico">
@@ -98,8 +109,7 @@
   </div>
 
   <!-- Pantalones -->
-  <h3 class="sub-title">Pantalones</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-categoria="pantalones">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Pantalon Gucci.jpg" class="card-img-top" alt="Pantalón Casual">
@@ -133,8 +143,7 @@
   </div>
 
   <!-- Vestidos -->
-  <h3 class="sub-title">Vestidos</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-categoria="vestidos">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Vestido Casual.jpg" class="card-img-top" alt="Vestido Casual">
@@ -168,8 +177,7 @@
   </div>
 
   <!-- Zapatillas -->
-  <h3 class="sub-title">Zapatillas</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-categoria="zapatillas">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Zapatillas Urbanas VC.jpg" class="card-img-top" alt="Zapatilla Urbana">
@@ -203,8 +211,7 @@
   </div>
 
   <!-- Carteras -->
-  <h3 class="sub-title">Carteras</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-categoria="carteras">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Prada Cartera.jpg" class="card-img-top" alt="Cartera Clásica">
@@ -238,8 +245,7 @@
   </div>
 
   <!-- Accesorios -->
-  <h3 class="sub-title">Accesorios</h3>
-  <div class="row g-4 mb-4">
+  <div class="row g-4 mb-4 producto" data-categoria="accesorios">
     <div class="col-md-4">
       <div class="card">
         <img src="Imagenes/Collar Versace.jpg" class="card-img-top" alt="Collar Minimalista">
