@@ -16,21 +16,21 @@
   <link href="Estilo Catalogo.css" rel="stylesheet"/>
 </head>
 <body>
-  <!-- Navbar -->
+
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg shadow-sm sticky-top custom-navbar">
   <div class="container-fluid">
-    <!-- Logo sin link -->
     <a class="navbar-brand">
-      <img src="Imagenes/Logo Vistalica.png" alt="Vistalica Logo" height="40">
+      <img src="Imagenes/Logo Vistalica.png" alt="Logo Vistalica" height="40">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" 
-            aria-label="Toggle navigation">
+            data-bs-target="#barraNavegacion"
+            aria-controls="barraNavegacion" aria-expanded="false" 
+            aria-label="Mostrar/Ocultar navegación">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Links navbar -->
+    <div class="collapse navbar-collapse" id="barraNavegacion">
+      <!-- Enlaces de la barra -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="Inicio.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
@@ -38,16 +38,16 @@
         <li class="nav-item"><a class="nav-link" href="impacto.html">Impacto</a></li>
         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
       </ul>
-      <!-- Barra de búsqueda e iconos -->
+      <!-- Barra de busqueda e iconos -->
       <form class="d-flex">
         <input class="form-control me-2" placeholder="Buscar productos..." aria-label="Buscar">
         <button class="btn btn-outline-success me-2" title="Buscar">
           <i class="bi bi-search"></i>
         </button>
-        <button class="btn btn-outline-dark me-2" type="button" title="Carrito">
+        <button class="btn btn-outline-dark me-2" type="button" title="Carrito de compras">
           <i class="bi bi-bag"></i>
         </button>
-        <button class="btn btn-outline-dark me-2" type="button" title="Usuario">
+        <button class="btn btn-outline-dark me-2" type="button" title="Cuenta de usuario">
           <i class="bi bi-person"></i>
         </button>        
       </form>
@@ -55,159 +55,271 @@
   </div>
 </nav>
 
+<!-- Sección Catalogo -->
+<section class="container py-5 catalogo">
+  <h2 class="section-title">Catálogo de Productos</h2>
+  <p class="catalogo-intro text-center">
+    Explora nuestra selección de ropa, calzado y accesorios pensados para acompañar tu estilo en cada ocasión.
+  </p>
 
-<main class="container py-5">
-  <h1 class="section-title text-center">Catálogo</h1>
-  <p class="text-center mb-5">Explora nuestra selección de productos por categoría y género.</p>
-
-  <!-- 🔹 Sweaters - Hombre -->
-  <h2 class="mb-3">Sweaters - Hombre</h2>
-  <div id="sweatersHombre" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row g-4">
-          <!-- Producto 1 -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Sweater Hombre Clásico">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sweater Clásico</h5>
-                <p class="card-text">$25.000</p>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">S</span>
-                  <span class="badge bg-secondary">M</span>
-                  <span class="badge bg-secondary">L</span>
-                  <span class="badge bg-secondary">XL</span>
-                </div>
-                <a href="#" class="btn btn-primary">Añadir al carrito</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 2 -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Sweater Hombre Deportivo">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sweater Deportivo</h5>
-                <p class="card-text">$28.000</p>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">S</span>
-                  <span class="badge bg-secondary">M</span>
-                  <span class="badge bg-secondary">L</span>
-                  <span class="badge bg-secondary">XL</span>
-                </div>
-                <a href="#" class="btn btn-primary">Añadir al carrito</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 3 -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Sweater Hombre Moderno">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sweater Moderno</h5>
-                <p class="card-text">$30.000</p>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">S</span>
-                  <span class="badge bg-secondary">M</span>
-                  <span class="badge bg-secondary">L</span>
-                  <span class="badge bg-secondary">XL</span>
-                </div>
-                <a href="#" class="btn btn-primary">Añadir al carrito</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Si quieres más páginas del carrusel puedes duplicar este bloque con otros productos -->
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#sweatersHombre" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#sweatersHombre" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-
-  <!-- 🔹 Sweaters - Mujer -->
-  <h2 class="mt-5 mb-3">Sweaters - Mujer</h2>
-  <div id="sweatersMujer" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row g-4">
-          <!-- Producto 1 -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Sweater Mujer Elegante">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sweater Elegante</h5>
-                <p class="card-text">$27.000</p>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">S</span>
-                  <span class="badge bg-secondary">M</span>
-                  <span class="badge bg-secondary">L</span>
-                  <span class="badge bg-secondary">XL</span>
-                </div>
-                <a href="#" class="btn btn-primary">Añadir al carrito</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 2 -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Sweater Mujer Casual">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sweater Casual</h5>
-                <p class="card-text">$22.000</p>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">S</span>
-                  <span class="badge bg-secondary">M</span>
-                  <span class="badge bg-secondary">L</span>
-                  <span class="badge bg-secondary">XL</span>
-                </div>
-                <a href="#" class="btn btn-primary">Añadir al carrito</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 3 -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Sweater Mujer Juvenil">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sweater Juvenil</h5>
-                <p class="card-text">$26.000</p>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">S</span>
-                  <span class="badge bg-secondary">M</span>
-                  <span class="badge bg-secondary">L</span>
-                  <span class="badge bg-secondary">XL</span>
-                </div>
-                <a href="#" class="btn btn-primary">Añadir al carrito</a>
-              </div>
-            </div>
-          </div>
+  <!-- Sweater y Polerones -->
+  <h3 class="sub-title">Sweater y Polerones</h3>
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Sweater Clasico.jpg" class="card-img-top" alt="Sweater Clásico">
+        <div class="card-body text-center">
+          <h5 class="card-title">Sweater Clásico</h5>
+          <p class="card-text">$25.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#sweatersMujer" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#sweatersMujer" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-</main>
-
-  <!-- Footer -->
-  <footer class="footer pt-5 pb-4 mt-5 bg-light">
-    <div class="container text-center">
-      <p class="small">© 2025 Vistalica — <a href="politicas.html">Políticas</a></p>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Poleron Deportivo.jpg" class="card-img-top" alt="Polerón Deportivo">
+        <div class="card-body text-center">
+          <h5 class="card-title">Polerón Deportivo</h5>
+          <p class="card-text">$28.000</p>
+          <button class="btn btn-sin-stock" disabled>Sin stock</button>
+        </div>
+      </div>
     </div>
-  </footer>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Sweater Moderno.jpg" class="card-img-top" alt="Sweater Moderno">
+        <div class="card-body text-center">
+          <h5 class="card-title">Sweater Moderno</h5>
+          <p class="card-text">$30.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalones -->
+  <h3 class="sub-title">Pantalones</h3>
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Pantalon Gucci.jpg" class="card-img-top" alt="Pantalón Casual">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pantalón Casual</h5>
+          <p class="card-text">$22.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Jeans Casuales Gucci.jpg" class="card-img-top" alt="Jeans Clásico">
+        <div class="card-body text-center">
+          <h5 class="card-title">Jeans Clásico</h5>
+          <p class="card-text">$26.000</p>
+          <button class="btn btn-sin-stock" disabled>Sin stock</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Pantalon Formal Gucci.jpg" class="card-img-top" alt="Pantalón Formal">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pantalón Formal</h5>
+          <p class="card-text">$32.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vestidos -->
+  <h3 class="sub-title">Vestidos</h3>
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Vestido Casual.jpg" class="card-img-top" alt="Vestido Casual">
+        <div class="card-body text-center">
+          <h5 class="card-title">Vestido Casual</h5>
+          <p class="card-text">$35.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Vestido Nocturno.jpg" class="card-img-top" alt="Vestido de Noche">
+        <div class="card-body text-center">
+          <h5 class="card-title">Vestido de Noche</h5>
+          <p class="card-text">$50.000</p>
+          <button class="btn btn-sin-stock" disabled>Sin stock</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Vestido Verano.jpg" class="card-img-top" alt="Vestido Verano">
+        <div class="card-body text-center">
+          <h5 class="card-title">Vestido Verano</h5>
+          <p class="card-text">$38.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zapatillas -->
+  <h3 class="sub-title">Zapatillas</h3>
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Zapatillas Urbanas VC.jpg" class="card-img-top" alt="Zapatilla Urbana">
+        <div class="card-body text-center">
+          <h5 class="card-title">Zapatilla Urbana</h5>
+          <p class="card-text">$40.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Zapatillas Deportivas BC.jpg" class="card-img-top" alt="Zapatilla Deportiva">
+        <div class="card-body text-center">
+          <h5 class="card-title">Zapatilla Deportiva</h5>
+          <p class="card-text">$42.000</p>
+          <button class="btn btn-sin-stock" disabled>Sin stock</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Zapatilla running BC.jpg" class="card-img-top" alt="Zapatilla Running">
+        <div class="card-body text-center">
+          <h5 class="card-title">Zapatilla Running</h5>
+          <p class="card-text">$45.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carteras -->
+  <h3 class="sub-title">Carteras</h3>
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Prada Cartera.jpg" class="card-img-top" alt="Cartera Clásica">
+        <div class="card-body text-center">
+          <h5 class="card-title">Cartera Clásica</h5>
+          <p class="card-text">$28.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/CarteraMano Prada.jpg" class="card-img-top" alt="Cartera de Mano">
+        <div class="card-body text-center">
+          <h5 class="card-title">Cartera de Mano</h5>
+          <p class="card-text">$30.000</p>
+          <button class="btn btn-sin-stock" disabled>Sin stock</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Cartera Elegante Prada.jpg" class="card-img-top" alt="Cartera Elegante">
+        <div class="card-body text-center">
+          <h5 class="card-title">Cartera Elegante</h5>
+          <p class="card-text">$33.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accesorios -->
+  <h3 class="sub-title">Accesorios</h3>
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Collar Versace.jpg" class="card-img-top" alt="Collar Minimalista">
+        <div class="card-body text-center">
+          <h5 class="card-title">Collar Minimalista</h5>
+          <p class="card-text">$15.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Pulsera Cuero Versace.jpg" class="card-img-top" alt="Pulsera de Cuero">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pulsera de Cuero</h5>
+          <p class="card-text">$12.000</p>
+          <button class="btn btn-sin-stock" disabled>Sin stock</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Imagenes/Aros Plateados versace.jfif" class="card-img-top" alt="Aros Plateados">
+        <div class="card-body text-center">
+          <h5 class="card-title">Aros Plateados</h5>
+          <p class="card-text">$18.000</p>
+          <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer mt-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-4 mb-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">Síguenos</h5>
+        <div class="d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="#" class="social-icon" title="Instagram">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+          <a href="#" class="social-icon" title="Twitter">
+            <i class="bi bi-twitter fs-3"></i>
+          </a>
+          <a href="#" class="social-icon" title="Facebook">
+            <i class="bi bi-facebook fs-3"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-1 d-none d-md-block">
+        <div class="vertical-separator mx-auto"></div>
+      </div>
+      <div class="col-md-4 mb-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">Enlaces útiles</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="politicas.html">Política de privacidad</a></li>
+          <li><a href="cookies.html">Política de cookies</a></li>
+          <li><a href="envio.html">Política de envío</a></li>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+        </ul>
+      </div>
+      <div class="col-md-1 d-none d-md-block">
+        <div class="vertical-separator mx-auto"></div>
+      </div>
+      <div class="col-md-2 mb-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">Contacto</h5>
+        <p>Email: <strong>contacto@vistalica.cl</strong></p>
+        <p><strong>ventas@vistalica.cl</strong></p>
+        <p>Teléfono:</p>
+        <p>+56 9 1234 5678</p>
+      </div>
+    </div>
+    <hr class="footer-separator mt-4">
+    <div class="text-center mt-3">
+      <p class="mb-0">2025 Vistalica — Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

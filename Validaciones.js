@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Formulario contacto
   const form = document.getElementById('contactForm');
   const nombre = document.getElementById('nombre');
   const apellido = document.getElementById('apellido');
@@ -7,9 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const mensaje = document.getElementById('mensaje');
   const charCount = document.getElementById('charCount');
 
+  function mostrarError(input, mensajeError) {
+    input.classList.add('esinvalido');
+    let feedback = input.nextElementSibling;
+    if (feedback && feedback.tagName === 'DIV') {
+      feedback.textContent = mensajeError;
+      feedback.style.display = 'block';
+    }
+  }
+
+  function quitarError(input) {
+    input.classList.remove('esinvalido');
+    let feedback = input.nextElementSibling;
+    if (feedback && feedback.tagName === 'DIV') {
+      feedback.style.display = 'none';
+    }
+  }
+
   function evitarNumeros(event) {
     if (event.key >= '0' && event.key <= '9') {
-      event.preventDefault(); 
+      event.preventDefault();
     }
   }
 
@@ -17,64 +35,51 @@ document.addEventListener('DOMContentLoaded', () => {
     input.value = input.value.replace(/[0-9]/g, '');
   }
 
+  // Eventos contacto
   nombre.addEventListener('keypress', evitarNumeros);
   apellido.addEventListener('keypress', evitarNumeros);
 
-  nombre.addEventListener('input', () => limpiarNumeros(nombre));
-  apellido.addEventListener('input', () => limpiarNumeros(apellido));
+  nombre.addEventListener('input', () => {
+    limpiarNumeros(nombre);
+    nombre.value.trim() !== '' ? quitarError(nombre) : mostrarError(nombre, 'Por favor, ingresa tu nombre.');
+  });
 
-  // Validaciones
-  function validarCampoVacio(input) {
-    if (input.value.trim() === '') {
-      input.classList.add('is-invalid');
-      return false;
-    } else {
-      input.classList.remove('is-invalid');
-      return true;
-    }
-  }
+  apellido.addEventListener('input', () => {
+    limpiarNumeros(apellido);
+    apellido.value.trim() !== '' ? quitarError(apellido) : mostrarError(apellido, 'Por favor, ingresa tu apellido.');
+  });
 
-  function validarCorreoElectronico(input) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(input.value.trim())) {
-      input.classList.add('is-invalid');
-      return false;
-    } else {
-      input.classList.remove('is-invalid');
-      return true;
-    }
-  }
+  correo.addEventListener('input', () => {
+    if (correo.value.trim() === '') mostrarError(correo, 'El correo es obligatorio.');
+    else if (!correo.value.includes('@') || !correo.value.includes('.')) mostrarError(correo, 'El correo debe contener "@" y ".".');
+    else quitarError(correo);
+  });
 
-  nombre.addEventListener('input', () => validarCampoVacio(nombre));
-  apellido.addEventListener('input', () => validarCampoVacio(apellido));
-  correo.addEventListener('input', () => validarCorreoElectronico(correo));
-  motivo.addEventListener('change', () => validarCampoVacio(motivo));
+  motivo.addEventListener('change', () => {
+    motivo.value.trim() === '' ? mostrarError(motivo, 'Por favor, selecciona un motivo.') : quitarError(motivo);
+  });
+
   mensaje.addEventListener('input', () => {
     const length = mensaje.value.length;
     charCount.textContent = `${length} / 250 caracteres`;
 
-    if (length === 0 || length > 250) {
-      mensaje.classList.add('is-invalid');
-    } else {
-      mensaje.classList.remove('is-invalid');
-    }
+    if (length === 0) mostrarError(mensaje, 'Por favor, escribe un mensaje.');
+    else if (length > 250) mostrarError(mensaje, 'El mensaje no puede exceder los 250 caracteres.');
+    else quitarError(mensaje);
   });
 
   form.addEventListener('submit', (e) => {
-    let isValid = true;
-    if (!validarCampoVacio(nombre)) isValid = false;
-    if (!validarCampoVacio(apellido)) isValid = false;
-    if (!validarCorreoElectronico(correo)) isValid = false;
-    if (!validarCampoVacio(motivo)) isValid = false;
-    if (mensaje.value.trim() === '' || mensaje.value.length > 250) {
-      mensaje.classList.add('is-invalid');
-      isValid = false;
-    }
-    
-    if (!isValid) {
-      e.preventDefault(); 
-    } else {
-      alert('Formulario enviado correctamente');
-    }
+    let esValido = true;
+
+    if (nombre.value.trim() === '') { mostrarError(nombre, 'Por favor, ingresa tu nombre.'); esValido = false; }
+    if (apellido.value.trim() === '') { mostrarError(apellido, 'Por favor, ingresa tu apellido.'); esValido = false; }
+    if (correo.value.trim() === '') { mostrarError(correo, 'El correo es obligatorio.'); esValido = false; }
+    else if (!correo.value.includes('@') || !correo.value.includes('.')) { mostrarError(correo, 'El correo debe contener "@" y ".".'); esValido = false; }
+    if (motivo.value.trim() === '') { mostrarError(motivo, 'Por favor, selecciona un motivo.'); esValido = false; }
+    if (mensaje.value.trim() === '') { mostrarError(mensaje, 'Por favor, escribe un mensaje.'); esValido = false; }
+    else if (mensaje.value.length > 250) { mostrarError(mensaje, 'El mensaje no puede exceder los 250 caracteres.'); esValido = false; }
+
+    if (!esValido) e.preventDefault();
+    else alert('Formulario enviado correctamente');
   });
 });
