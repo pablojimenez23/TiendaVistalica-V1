@@ -248,3 +248,8 @@
   background-color: rgba(0,0,0,0.2);
   margin: auto;
 }
+/* Cambia el color de las flechas del carrusel a negro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(1);
+}
