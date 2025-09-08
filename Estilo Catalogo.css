@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Catalogo y colecciones*/
 .catalogo, .colecciones {
   padding-top: 3rem;
@@ -16,23 +15,10 @@
 
 .catalogo .catalogo-intro,
 .colecciones .catalogo-intro {
-=======
-/* Seccion catalogo */
-.catalogo .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #333;
-}
-
-.catalogo .catalogo-intro {
->>>>>>> e3a7c4b (agregue login)
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 2rem;
   text-align: center;
-<<<<<<< HEAD
 }
 
 .catalogo .sub-title,
@@ -131,8 +117,6 @@
     height: 100%;         
     object-fit: cover;
   }
-=======
->>>>>>> e3a7c4b (agregue login)
 }
 
 .catalogo .sub-title {
@@ -187,11 +171,6 @@
   font-weight: 600;
   padding: 5px 12px;
   border-radius: 6px;
-}
-
-.stock.disponible {
-  background-color: #28a745;
-  color: #fff;
 }
 
 .stock.sin-stock {

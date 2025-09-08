@@ -1,9 +1,7 @@
-/* Navbar */
 .custom-navbar {
   background-color: #87CEFA;
 }
 
-/* Botones de la navbar */
 .custom-navbar .btn-outline-success,
 .custom-navbar .btn-outline-dark {
   color: #000;
@@ -19,7 +17,6 @@
   border-color: #000;
 }
 
-/* Carrusel Inicio */
 .hero-img {
   width: 100%;
   height: 80vh;
@@ -66,7 +63,6 @@
   font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-/* Botón dentro del carrusel */
 #carruselPrincipal .carousel-caption .btn {
   padding: 12px 30px;
   font-size: 1rem;
@@ -76,14 +72,33 @@
   color: #000; 
 }
 
-/* Carrusel Categorias */
-#carruselCategorias .card img {
+.categoria-card {
+  width: 400px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin: 0 10px;
+}
+
+.categoria-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-/* Botones del carrusel */
+.categoria-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
 #carruselCategorias .carousel-control-prev,
 #carruselCategorias .carousel-control-next {
   width: 60px;
@@ -93,13 +108,13 @@
 }
 
 #carruselCategorias .carousel-control-prev {
-  left: -80px;
-}
-#carruselCategorias .carousel-control-next {
-  right: -80px; 
+  left: -60px;
 }
 
-/* iconos */
+#carruselCategorias .carousel-control-next {
+  right: -60px; 
+}
+
 #carruselCategorias .carousel-control-prev i,
 #carruselCategorias .carousel-control-next i {
   font-size: 2.5rem;
@@ -107,18 +122,29 @@
 
 @media (max-width: 768px) {
   #carruselCategorias .carousel-control-prev {
-    left: -30px;
+    left: -20px;
   }
   #carruselCategorias .carousel-control-next {
-    right: -30px;
+    right: -20px;
   }
   #carruselCategorias .carousel-control-prev i,
   #carruselCategorias .carousel-control-next i {
     font-size: 2rem;
   }
+  #carruselCategorias .carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+  }
+  #carruselCategorias .carousel-item {
+    flex: 0 0 auto;
+    width: 80%;
+    scroll-snap-align: center;
+  }
 }
 
-/* Seccion Socios */
 .brands {
   background-color: #fff;
   padding: 3rem 0;
@@ -160,47 +186,12 @@
   object-fit: contain;
 }
 
-/* Tarjetas de productos y mision,vision y valores de la empresa */
-.card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  padding: 1rem;
-}
-
 .old-price {
   color: #888;
   text-decoration: line-through;
   font-size: 0.95rem;
 }
 
-/* Ajuste responsive */
-@media (max-width: 768px) {
-  .card img {
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-  }
-}
-
-/* Footer */
 .footer {
   background-color: #87CEFA;
   color: #000;
@@ -248,8 +239,4 @@
   background-color: rgba(0,0,0,0.2);
   margin: auto;
 }
-/* Cambia el color de las flechas del carrusel a negro */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) grayscale(1);
-}
+
