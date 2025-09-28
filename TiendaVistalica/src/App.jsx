@@ -1,4 +1,4 @@
-// src/App.jsx - Con ruta de Colecciones
+// src/App.jsx - Corregido con Login
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./Componentes/Navbar";
@@ -10,7 +10,11 @@ import Categorias from "./Componentes/Categorias";
 import Boletin from "./Componentes/Boletin";
 import Footer from "./Componentes/Footer";
 import Catalogo from "./Componentes/Catalogo";
-import Colecciones from "./Componentes/Colecciones"; // Importar nuevo componente
+import Colecciones from "./Componentes/Colecciones";
+import Login from "./Componentes/Login";
+import Registro from "./Componentes/Registro";
+import Impacto from "./Componentes/Impacto";
+import Contacto from "./Componentes/Contacto";
 
 // Componente para la página de inicio
 const Home = () => (
@@ -40,18 +44,11 @@ function App() {
           <Route path="/inicio" element={<Home />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/colecciones" element={<Colecciones />} />
-          <Route path="/impacto" element={
-            <div className="container py-5">
-              <h2>Impacto</h2>
-              <p>Próximamente...</p>
-            </div>
-          } />
-          <Route path="/contacto" element={
-            <div className="container py-5">
-              <h2>Contacto</h2>
-              <p>Próximamente...</p>
-            </div>
-          } />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/impacto" element={<Impacto />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
         
         <Footer />
